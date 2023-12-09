@@ -6,24 +6,14 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import Navigator from './src/navigation';
 
 function App(): JSX.Element {
   return (
     <>
-      <SafeAreaView />
-      <View style={styles.container}>
-        <Text>Portfolio</Text>
-      </View>
+      <Navigator />
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
 
 export default App;
