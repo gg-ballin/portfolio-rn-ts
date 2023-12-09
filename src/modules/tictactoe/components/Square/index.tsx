@@ -1,10 +1,11 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
+
 import styles from './styles';
 
 type SquareProps = {
   index: number;
-  board: string[];
+  board: (string | null)[];
   handlePress: () => void;
   winner: string | null;
 };
