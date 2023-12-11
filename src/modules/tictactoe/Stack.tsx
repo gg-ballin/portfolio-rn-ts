@@ -10,7 +10,11 @@ const SCREEN_OPTIONS = {
 const TicTacToeStack = (): JSX.Element => {
   return (
     <RootStack.Navigator screenOptions={SCREEN_OPTIONS}>
-      <RootStack.Screen name="TicTacToeHome" component={TicTacToeHome} />
+      <RootStack.Screen
+        options={{gestureEnabled: true}}
+        name="TicTacToeHome"
+        component={TicTacToeHome}
+      />
     </RootStack.Navigator>
   );
 };
