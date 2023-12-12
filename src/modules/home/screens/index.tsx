@@ -22,6 +22,11 @@ const Home = ({navigation}: ScreenComponent<'HomeScreen'>) => {
             title="Tic Tac Toe"
             subtitle="Play Tic Tac Toe"
           />
+          <Tile
+            onPress={() => navigation.navigate('SignUpFormStack')}
+            title="Sign Up Form"
+            subtitle="Simple sign up form with validation in React Native"
+          />
         </View>
       </View>
     </>

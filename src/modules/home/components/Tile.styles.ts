@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical: 15,
     paddingHorizontal: 20,
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
     width: WINDOW_WIDTH,
     backgroundColor: 'cadetblue',
     flexDirection: 'row',

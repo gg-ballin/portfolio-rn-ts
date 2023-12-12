@@ -1,9 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  safearea: {
-    backgroundColor: 'cadetblue',
-  },
   container: {
     flex: 1,
     backgroundColor: 'cadetblue',

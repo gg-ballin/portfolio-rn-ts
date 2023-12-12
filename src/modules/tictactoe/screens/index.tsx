@@ -1,15 +1,19 @@
 import React, {useEffect} from 'react';
 
-import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {ScreenComponent} from '../../../navigation/interfaces';
 import useCheckWinner from '../hooks/useCheckWinner';
 import useHandlePress from '../hooks/useHandlePress';
 import Board from '../components/Board';
 
 import styles from './styles';
-import Icon from '../../../components/Icon';
+import Header from '../../../components/Header';
+import SafeAreaView from '../../../components/SafeAreaView';
 
-const TicTacToeHome = ({}: ScreenComponent<'TicTacToeHome'>) => {
+const TicTacToeHome = ({
+  navigation,
+  route,
+}: ScreenComponent<'TicTacToeHome'>) => {
   const {winner, checkWinner, resetWinner} = useCheckWinner();
   const {board, currentTurn, handlePress, cleanGame} = useHandlePress();
 
@@ -23,13 +27,15 @@ const TicTacToeHome = ({}: ScreenComponent<'TicTacToeHome'>) => {
   };
   return (
     <>
-      <SafeAreaView style={styles.safearea} />
+      <SafeAreaView />
+      <Header
+        title="Tic-tac-toe"
+        goBack
+        navigation={navigation}
+        route={route}
+      />
       <View style={styles.container}>
-        <View>
-          <Icon name="chevron-left" size={20} />
-        </View>
         <View style={styles.contentGame}>
-          <Text style={styles.title}>Tic-tac-toe</Text>
           <Text style={styles.title}>
             {winner
               ? winner === 'Draw'
@@ -45,7 +51,6 @@ const TicTacToeHome = ({}: ScreenComponent<'TicTacToeHome'>) => {
           <View style={styles.board}>
             <Board board={board} handlePress={handlePress} winner={winner} />
           </View>
-          v
         </View>
       </View>
     </>

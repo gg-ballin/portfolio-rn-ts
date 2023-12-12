@@ -5,12 +5,19 @@ export type TicTacToeScreenParams = {
   TicTacToeHome: undefined;
 };
 
+export type SignUpFormScreenParams = {
+  SignUpFormStack: undefined;
+  SignUpFormScreen: undefined;
+};
+
 export type HomeScreenParams = {
   HomeStack: undefined;
   HomeScreen: undefined;
 };
 
-export type RootScreenParams = TicTacToeScreenParams & HomeScreenParams;
+export type RootScreenParams = TicTacToeScreenParams &
+  SignUpFormScreenParams &
+  HomeScreenParams;
 
 export type ScreenComponent<
   RouteName extends keyof RootScreenParams = keyof RootScreenParams,
